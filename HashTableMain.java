@@ -1,9 +1,10 @@
-package HashTable.UC1;
+package HashTable.UC2;
 
 public class HashTableMain {
     public static void main(String[] args) {
         HashtableImpl<String, Integer> hashImpl = new HashtableImpl();
-        String message = "To be or not to be";
+        String message = "Paranoids are not paranoid because they are paranoid but " +
+                "because they keep putting themselves deliberately into paranoid avoidable situations";
 
         //Split the words when a white space comes up.
         //Convert all the words in lowercase

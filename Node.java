@@ -1,4 +1,4 @@
-package HashTable.UC1;
+package HashTable.UC2;
 
 public class Node<K, V> {
     K key;
