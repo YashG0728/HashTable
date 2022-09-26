@@ -1,6 +1,7 @@
-package HashTable.UC2;
+package HashTable.UC3;
 
 public class HashTableMain {
+
     public static void main(String[] args) {
         HashtableImpl<String, Integer> hashImpl = new HashtableImpl();
         String message = "Paranoids are not paranoid because they are paranoid but " +
@@ -11,7 +12,7 @@ public class HashTableMain {
         String[] messageArray = message.toLowerCase().split(" ");
 
         for(String word: messageArray) {
-            //Search for the word in the linked list
+            //Search for the word in the hashtable
             Integer value =  hashImpl.get(word);
             //If not found, frequency of the word StayWith 1
             if( value == null)
@@ -20,7 +21,14 @@ public class HashTableMain {
                 //If found, frequency of the word increases by 1
                 value = value + 1;
             hashImpl.add(word , value);
+            System.out.println("Value = "+value);
         }
+        System.out.println(hashImpl);
+
+        //Remove "avoidable" from the hashtable
+        hashImpl.remove("avoidable");
+
+        //Display the hashtable
         System.out.println(hashImpl);
     }
 }
